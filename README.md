@@ -1,25 +1,31 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Thrills App
+This application was designed for adventure or thrill seeking individuals who visit the island of Jamamica. The app was made with React.js & Redux which was used as the frontend and it connects to a Rails API on the Backend through Redux-Thunk. Using CSS and bootstrap for styling.
 
-Things you may want to cover:
 
-* Ruby version
+Installing To run this app locally, fork and clone the frontend GitHub repo and the backend Github repo to your local machine. https://github.com/rvt-tex/thrills-api https://github.com/rvt-tex/thrills-client
 
-* System dependencies
+Change directories into the backend local directory. Run bundle install to install dependencies, and rails db:migrate and rails db:seed to create and seed the database.
 
-* Configuration
+$cd tex-luxury-pins-backend $bundle install $rails db:migrate $rails db:seed Run $rails s to start a web server and access the app in a web browser.
 
-* Database creation
+Change directories into the client(frontend) local directory. Run the following comands;
 
-* Database initialization
+npm install
+npm start
+If you need to install npm first install homebrew and then node (for MacOs).
 
-* How to run the test suite
+Libraries and Packeges
+Some of the libraries and packages used in this project are:
 
-* Services (job queues, cache servers, search engines, etc.)
+React 16.13.1
+React Router Dom 5.2.0
+Redux 4.0.5
+Redux-Thunk 2.3.0
+Redux DevTools Extension 2.13.8
+React Dom 16.13.1
 
-* Deployment instructions
 
-* ...
-# thrills-api
+Bug reports and pull requests are welcome on GitHub at https://github.com/rvt-tex/thrills-client or at https://github.com/rvt-tex/thrills-api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+
+License This project is licensed under the MIT License - see the LICENSE.md file for details

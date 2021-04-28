@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  resources :tours
   resources :clients
+  resources :tours 
   resources :reservations
-   
   
 end
