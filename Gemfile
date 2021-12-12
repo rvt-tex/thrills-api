@@ -26,6 +26,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rack-cors'
 gem 'active_model_serializers'
 
+gem 'jsonapi-serializer'
 gem 'fast_jsonapi'
 gem 'dotenv-rails'
 gem 'jwt'

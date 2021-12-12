@@ -6,11 +6,14 @@ class ToursController < ApplicationController
     @tours = Tour.all
 
     render json: @tours
+    # render json: TourSerializer.new(@tours)
   end
 
   # GET /tours/1
   def show
     render json: @tour
+    # render json: TourSerializer.new(@tour)
+
   end
 
   # POST /tours
@@ -18,6 +21,8 @@ class ToursController < ApplicationController
 
     @tour = Tour.create!(tour_params)
     render json: @tour, status: :created, location: @tour
+    # render json: TourSerializer.new(@tour)
+   
 
 
     # @tour = Tour.new(tour_params)
@@ -34,6 +39,7 @@ class ToursController < ApplicationController
     
     @tour.update!(tour_params)
     render json: @tour
+    # render json: TourSerializer.new(@tour)
 
     # if @tour.update(tour_params)
     #   render json: @tour
