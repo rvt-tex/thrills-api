@@ -15,22 +15,31 @@ class ToursController < ApplicationController
 
   # POST /tours
   def create
-    @tour = Tour.new(tour_params)
 
-    if @tour.save
-      render json: @tour, status: :created, location: @tour
-    else
-      render json: @tour.errors, status: :unprocessable_entity
-    end
+    @tour = Tour.create!(tour_params)
+    render json: @tour, status: :created, location: @tour
+
+
+    # @tour = Tour.new(tour_params)
+
+    # if @tour.save
+    #   render json: @tour, status: :created, location: @tour
+    # else
+    #   render json: @tour.errors, status: :unprocessable_entity
+    # end
   end
 
   # PATCH/PUT /tours/1
   def update
-    if @tour.update(tour_params)
-      render json: @tour
-    else
-      render json: @tour.errors, status: :unprocessable_entity
-    end
+    
+    @tour.update!(tour_params)
+    render json: @tour
+
+    # if @tour.update(tour_params)
+    #   render json: @tour
+    # else
+    #   render json: @tour.errors, status: :unprocessable_entity
+    # end
   end
 
   # DELETE /tours/1

@@ -15,22 +15,30 @@ class ReservationsController < ApplicationController
 
   # POST /reservations
   def create
-    @reservation = Reservation.new(reservation_params)
 
-    if @reservation.save
-      render json: @reservation, status: :created, location: @reservation
-    else
-      render json: @reservation.errors, status: :unprocessable_entity
-    end
+    @reservation = Reservation.create!(reservation_params)
+    render json: @reservation, status: :created, location: @reservation
+
+    # @reservation = Reservation.new(reservation_params)
+
+    # if @reservation.save
+    #   render json: @reservation, status: :created, location: @reservation
+    # else
+    #   render json: @reservation.errors, status: :unprocessable_entity
+    # end
   end
 
   # PATCH/PUT /reservations/1
   def update
-    if @reservation.update(reservation_params)
-      render json: @reservation
-    else
-      render json: @reservation.errors, status: :unprocessable_entity
-    end
+
+    @reservation.update!(reservation_params)
+    render json: @reservation
+
+    # if @reservation.update(reservation_params)
+    #   render json: @reservation
+    # else
+    #   render json: @reservation.errors, status: :unprocessable_entity
+    # end
   end
 
   # DELETE /reservations/1
